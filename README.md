@@ -21,11 +21,13 @@ Deployment Steps
    (initializes Terraform configuration and Provisions all defined AWS resources (e.g. Glue database, IAM roles, job, crawler, etc.).
 5. Trigger the Glue crawler to generate the Glue table
 6. Trigger the Glue job to run the SQL ETL (manual through the console or via schedule):
+7. 
    Manually via the AWS Console (for testing)
          - Go to the AWS Glue Console.
          - Navigate to Jobs.
          - Select the job user_event_athena_etl and click Run.
          - Monitor logs in CloudWatch Logs for eal-time progress.
+   
    Scheduled via AWS Glue Triggers (for production)
           - Create a Glue trigger (time-based or event-based).
           - Link it to  ETL job.
@@ -33,6 +35,7 @@ Deployment Steps
 
 Output
 Transformed data with lag time → s3://<bucket>/output/clean/transformed_events.csv
+
 Bad/invalid records → s3://<bucket>/output/quarantine/bad_records.csv
 
 Queries
