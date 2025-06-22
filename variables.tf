@@ -71,17 +71,6 @@ variable "athena_output" {
   description = "S3 output location for Athena query results"
 }
 
-# SQL query executed via Athena to fetch source data
-variable "athena_query" {
-  default     = "SELECT * FROM user_events"
-  description = "SQL query used by Glue to retrieve input records from Athena"
-}
-
-# Destination path where cleaned output and quarantined records go
-variable "output_s3_path" {
-  default     = "s3://user-events-data-lake/output/"
-  description = "Output folder for final ETL result and quarantine file"
-}
 
 # Name for the Glue job that runs the Python ETL script
 variable "glue_job_name" {
