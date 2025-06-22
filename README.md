@@ -17,7 +17,8 @@ Deployment Steps
    This bucket will hold the source data, job scripts, and transformed output.
 2. Upload  Glue job script (user_events_etl.py) to scripts/
 3. Upload  user_events.csv into source/ to enable the Glue crawler to discover and catalog the schema.
-4. Run terraform init && terraform apply (initializes Terraform configuration and Provisions all defined AWS resources (e.g. Glue database, IAM roles, job, crawler, etc.).
+4. Run terraform init && terraform apply
+   (initializes Terraform configuration and Provisions all defined AWS resources (e.g. Glue database, IAM roles, job, crawler, etc.).
 5. Trigger the Glue crawler to generate the Glue table
 6. Trigger the Glue job to run the SQL ETL (manual through the console or via schedule):
    Manually via the AWS Console (for testing)
