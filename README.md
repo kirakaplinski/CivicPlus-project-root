@@ -21,7 +21,7 @@ Deployment Steps
    (initializes Terraform configuration and Provisions all defined AWS resources (e.g. Glue database, IAM roles, job, crawler, etc.).
 5. Trigger the Glue crawler to generate the Glue table
 6. Trigger the Glue job to run the SQL ETL (manual through the console or via schedule):
-7. 
+ 
    Manually via the AWS Console (for testing)
          - Go to the AWS Glue Console.
          - Navigate to Jobs.
