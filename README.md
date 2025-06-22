@@ -26,7 +26,7 @@ Deployment Steps
          - Go to the AWS Glue Console.
          - Navigate to Jobs.
          - Select the job user_event_athena_etl and click Run.
-         - Monitor logs in CloudWatch Logs for eal-time progress.
+         - Monitor logs in CloudWatch Logs for real-time progress.
    
    Scheduled via AWS Glue Triggers (for production)
           - Create a Glue trigger (time-based or event-based).
