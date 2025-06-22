@@ -22,8 +22,8 @@ resource "aws_glue_job" "athena_etl" {
     "--job-bookmark-option"                  = "job-bookmark-disable"             #each run processes all available data (no incremental loading)
     "--ATHENA_DATABASE"                      = var.glue_db_name
     "--ATHENA_OUTPUT"                        = var.athena_output
-    "--ATHENA_QUERY"                         = var.athena_query
-    "--OUTPUT_S3_PATH"                       = var.output_s3_path
+    "--CLEAN_QUERY"                         = file("${path.module}/queries/clean.sql")
+    "--QUARANTINE_QUERY"                       = file("${path.module}/queries/quarantine.sql")
   }
 
   tags = {
